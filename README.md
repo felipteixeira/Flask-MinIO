@@ -1,12 +1,12 @@
-#Automação da aplicação flask e minIO
+# Automação da aplicação flask e minIO
 
-##Ferramentas utilizadas:
-######Docker
-######Shell Script
-######Ansible
+## Ferramentas utilizadas:
+###### Docker
+###### Shell Script
+###### Ansible
 
-##pré-requisitos: 
-######Ansible
+## pré-requisitos: 
+###### Ansible
 
 A partir do diretório home/ubuntu, execute o git clone no repositório: 
 https://github.com/felipteixeira/instruct-auto.git
