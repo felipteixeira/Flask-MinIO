@@ -27,6 +27,6 @@
           dest: /home/ubuntu/app/python
     
       - name: install MinIO using docker via shell Script
-        script: /home/ubuntu/descomplicando-o-ansible/shell.sh \
+        script: /home/ubuntu/ansible/scripts.sh \
                 1> /tmp/install.output.log \
                 2> /tmp/install.error.log
