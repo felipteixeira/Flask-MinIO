@@ -1,0 +1,32 @@
+---
+    - hosts: hosta
+      become: yes
+      remote_user: ubuntu
+      tasks:
+      - name: add github ssh key
+        copy: >
+          src=files/id_rsa.github
+          dest=/root/.ssh/id_rsa.github
+          owner=root
+          group=root
+          mode=0600
+    
+      - name: configure ssh to use ansible key for github.com
+        template: >
+          src=templates/ssh_config.j2
+          dest=/root/.ssh/config
+          owner=root
+          group=root
+          mode=064
+    
+      - git:
+          repo: git@github.com:felipteixeira/python.git
+          version: master
+          accept_hostkey: yes
+          key_file: /root/.ssh/id_rsa.github
+          dest: /home/ubuntu/app/python
+    
+      - name: install MinIO using docker via shell Script
+        script: /home/ubuntu/descomplicando-o-ansible/shell.sh \
+                1> /tmp/install.output.log \
+                2> /tmp/install.error.log

@@ -1,0 +1,2 @@
+#Automação deploy minIO
+
