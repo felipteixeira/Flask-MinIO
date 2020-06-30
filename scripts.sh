@@ -1,6 +1,10 @@
 #!/bin/bash
 
+#install Docker on Server
+apt install -y docker.io
+
 #run MinIO on Docker container and change secret and access key!
+sleep 5
 docker pull minio/minio
 docker run -t -d -p 9000:9000 --name minioServer \
   -e "MINIO_ACCESS_KEY=h76X1MDp4k" \

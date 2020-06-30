@@ -30,12 +30,12 @@
           key_file: /root/.ssh/id_rsa.github
           dest: /home/ubuntu/app/python
     
-      - name: install MinIO using docker via shell-script!
+      - name: install Docker, run MinIO container, export variables, install dependencies and run the serve via shell-script!
         script: /home/ubuntu/instruct-auto/scripts.sh \
                 1> /tmp/install.output.log \
                 2> /tmp/install.error.log
 
-      - name: create a file to send to MinIO
+      - name: create a file to send to MinIO!
         shell: touch /tmp/fileToSendToMinIO
         args:
           warn: no
