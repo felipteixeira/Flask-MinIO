@@ -5,14 +5,13 @@
 * ###### Shell Script
 * ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS free-tier
 
-### pré-requisitos: Ansible
-
+## pré-requisitos: Ansible server.
 
 Para escrever a automação, utilizei dois repositórios privados no github.  
 Sendo eles: [automação](https://github.com/felipteixeira/instruct-auto.git) e
 [minio_Uploader](https://github.com/felipteixeira/python)
 
-Para executar a tarefa de automação, utilizei o ansible instalado em uma instância EC2 na AWS, apontando para o servidor da instruct.
+Para executar a tarefa de automação, utilizei o Ansible instalado em uma instância EC2 na AWS, apontando para o servidor da **instruct.**
 
 No server Ansible, a partir do diretório **home/ubuntu**, execute git clone + [automação](https://github.com/felipteixeira/instruct-auto.git)
 
