@@ -5,8 +5,8 @@
 * ###### Shell Script
 * ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS free-tier
 
-## pré-requisitos: 
-###### Ansible
+## pré-requisitos:
+### Ansible  
 
 
 Para escrever a automação, utilizei dois repositórios privados no github.
@@ -32,10 +32,10 @@ Caso esteja utilizando senha, utilize o parametro -k e passe a senha quando soli
 ansible-playbook -i hosts playbook.yml -k
 ```
 
-Após finalizar as tarefas do playbook, teste os serviços abaixo:
+Após finalizar as tarefas do playbook, teste os serviços abaixo:  
 [Flask](http://52.14.169.24:5000/) / [MinIO](http://52.14.169.24:9000/)
 
-Para logar no [MinIO](http://52.14.169.24:9000/) utilize **ACCESS_KEY/SECRET_KEY.**
+Para logar no [MinIO](http://52.14.169.24:9000/) utilize **ACCESS_KEY/SECRET_KEY.**  
 Ao logar, virique se dentro do **bucket-teste** existe o arquivo "fileToSendToMinIO" enviado pela automação.
 
 ## Resumo da automação:
