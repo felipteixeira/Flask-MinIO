@@ -5,8 +5,7 @@
 * ###### Shell Script
 * ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS free-tier
 
-## pré-requisitos:
-### Ansible    
+### pré-requisitos: Ansible
 
 
 Para escrever a automação, utilizei dois repositórios privados no github.  
