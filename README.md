@@ -3,9 +3,9 @@
 ## Ferramentas utilizadas:
 * ###### [Docker](https://docs.docker.com/)
 * ###### Shell Script
-* ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS free-tier
+* ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS ubuntu free-tier
 
-## pré-requisitos: Ansible server.
+## pré-requisitos: Ansible.
 
 Para escrever a automação, utilizei dois repositórios privados no github.  
 Sendo eles: [automação](https://github.com/felipteixeira/instruct-auto.git) e
@@ -50,7 +50,7 @@ Em **files** e **templates** contém os arquivos necessários para o servidor ta
 # Deploy automático
 ## Ferramentas utilizadas:
 * ###### [Deploybot](https://deploybot.com/)
-* ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS free-tier
+* ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS ubuntu free-tier
 
 
 Para automatizar o deploy da aplicação em caso de alteração na branch master do repositório: [Minio_Uploader](https://github.com/felipteixeira/python) utilizei o [deploybot](https://deploybot.com/).
@@ -59,7 +59,10 @@ Ao receber uma nova versão do código, a ferramenta conecta via SSH no servidor
 ```bash
 ansible-playbook -i hosts playbook.yml 
 ```
-Assim o server da aplicação recebe a ultima versão do código. 
+Assim o server da aplicação recebe a ultima versão do código.
+
+Para efetuar testes, basta enviar um commit com as alterações para o repositório 
+[Minio_Uploader](https://github.com/felipteixeira/python) pois o serviço está up.
 
 
 
