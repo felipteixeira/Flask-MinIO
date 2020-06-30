@@ -6,10 +6,10 @@
 * ###### [Ansible](https://docs.ansible.com/ansible/latest/index.html) + AWS free-tier
 
 ## pré-requisitos:
-### Ansible  
+### Ansible    
 
 
-Para escrever a automação, utilizei dois repositórios privados no github.
+Para escrever a automação, utilizei dois repositórios privados no github.  
 Sendo eles: [automação](https://github.com/felipteixeira/instruct-auto.git) e
 [minio_Uploader](https://github.com/felipteixeira/python)
 
