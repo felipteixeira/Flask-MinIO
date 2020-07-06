@@ -1,5 +1,5 @@
 ---
-    - hosts: instruct
+    - hosts: eliot-01
       become: yes
       remote_user: ubuntu
       tasks:
@@ -21,17 +21,16 @@
           dest=/root/.ssh/config
           owner=root
           group=root
-          mode=064
+          mode=0640
     
       - git:
           repo: git@github.com:felipteixeira/python.git
           version: master
-          accept_hostkey: yes
           key_file: /root/.ssh/id_rsa.github
-          dest: /home/ubuntu/app/python
+          dest: /home/$USER/app/python
     
       - name: install Docker, run MinIO container, export variables, install dependencies and run the server via shell-script!
-        script: /home/ubuntu/instruct-auto/scripts.sh \
+        script: scripts.sh \
                 1> /tmp/install.output.log \
                 2> /tmp/install.error.log
 
@@ -41,6 +40,6 @@
           warn: no
     
       - name: send file using POST to MinIO bucket!
-        shell: curl -X POST -F "file=@/tmp/fileToSendToMinIO" http://52.14.169.24:5000/minio-upload/bucket-teste/fileToSendToMinIO
+        shell: curl -X POST -F "file=@/tmp/fileToSendToMinIO" http://3.21.186.229:5000/minio-upload/bucket-teste/fileToSendToMinIO
         args:
           warn: no
