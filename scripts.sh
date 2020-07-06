@@ -48,6 +48,7 @@ fi
 
 
 #run the server
+sleep 3
 gunicorn --bind 0.0.0.0:5000 wsgi:app -D
 
 exit 0
